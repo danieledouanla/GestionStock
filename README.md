@@ -1,8 +1,8 @@
-📦 Inventory Management System & Automated Reporting
-🚀 Overview
+#📦 Inventory Management System & Automated Reporting
+#🚀 Overview
 Ce projet est un module de gestion de stocks conçu pour automatiser la surveillance des inventaires. Il combine une base de données relationnelle robuste et un moteur de reporting pour transformer des données brutes en documents d'aide à la décision.
 
-🛠 Tech Stack
+#🛠 Tech Stack
 Language: Java (JDK 17+)
 
 Database: MySQL (Workbench)
@@ -11,7 +11,7 @@ Reporting Tool: JasperReports (via Jaspersoft Studio)
 
 Driver: JDBC (MySQL Connector/J)
 
-📊 Data Pipeline Architecture
+#📊 Data Pipeline Architecture
 Le système suit un flux de données structuré pour garantir l'intégrité des rapports :
 
 Data Storage: Modélisation des tables de stock sous MySQL.
@@ -22,7 +22,7 @@ Engine: Utilisation de JasperReports pour la compilation et le remplissage des d
 
 Output: Génération automatique d'un rapport décisionnel au format PDF.
 
-📝 Key Features & Implementation
+#📝 Key Features & Implementation
 1. Database Connectivity (MySQL)
 La connexion est optimisée via une gestion d'exceptions (SQLException) pour assurer la stabilité du module.
 
@@ -39,7 +39,7 @@ Data Filling: Injection des données SQL en temps réel avec JasperFillManager.
 
 Export: Production du fichier final Etat_Stock.pdf.
 
-📂 Project Structure
+#📂 Project Structure
 src/RapportStock.java : Coeur logique de l'application.
 
 src/rapport_stock.jrxml : Design du rapport (Layout & Queries).
@@ -53,7 +53,7 @@ JasperReports 7.0.2 : Moteur de génération.
 
 MySQL Connector-J 9.2.0 : Pont de communication entre Java et MySQL.
 
-💡 Why this matters for Data Analysis?
+#💡 Why this matters for Data Analysis?
 Ce projet démontre ma capacité à :
 
 Concevoir et interroger des bases de données relationnelles.
