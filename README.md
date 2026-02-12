@@ -1,37 +1,64 @@
-#####  Module : Génération de Rapport PDF
+📦 Inventory Management System & Automated Reporting
+🚀 Overview
+Ce projet est un module de gestion de stocks conçu pour automatiser la surveillance des inventaires. Il combine une base de données relationnelle robuste et un moteur de reporting pour transformer des données brutes en documents d'aide à la décision.
 
-Ce module génère un rapport PDF de l’état du stock actuel à partir d’un fichier .jrxml via JasperReports.
+🛠 Tech Stack
+Language: Java (JDK 17+)
 
-### Etape 1: Connection de la base de données MySQL a Intellij
+Database: MySQL (Workbench)
 
-Cette étape consiste a connecter notre base de données MySQL créer ici sous MySQL Workbench a Java.
+Reporting Tool: JasperReports (via Jaspersoft Studio)
 
-- Creation d'une classe java nommée DatabaseManager avec les attributs permettant la connection a la base de données.
-- Utilisation des bibliothèques java.sql.Connection, java.sql.DriverManager, et java.sql.SQLException. 
+Driver: JDBC (MySQL Connector/J)
 
-### Etape 2: Connection de JasperStudio a MySQL Workbench et generation du rapport
+📊 Data Pipeline Architecture
+Le système suit un flux de données structuré pour garantir l'intégrité des rapports :
 
-##  Fichier principal
+Data Storage: Modélisation des tables de stock sous MySQL.
 
-- src/RapportStock.java
+Connectivity: Couche d'abstraction via la classe DatabaseManager pour sécuriser les appels JDBC.
 
-##  Fonctionnalités
+Engine: Utilisation de JasperReports pour la compilation et le remplissage des données.
 
-- Compilation du fichier rapport_stock.jrxml
-- Récupération des données via JDBC
-- Export au format Etat_Stock.pdf
+Output: Génération automatique d'un rapport décisionnel au format PDF.
 
-##  Dépendances
+📝 Key Features & Implementation
+1. Database Connectivity (MySQL)
+La connexion est optimisée via une gestion d'exceptions (SQLException) pour assurer la stabilité du module.
 
-- jasperreports:7.0.2
-- mysql-connector-j-9.2.0
+Class: DatabaseManager
 
- ## Chemin du rapport généré
+Libraries: java.sql.Connection, java.sql.DriverManager.
 
-- src/Etat_Stock.pdf
+2. Automated Reporting (JasperReports)
+Le module transforme un template XML (.jrxml) en un rapport visuel prêt pour la direction.
 
-##  Infos techniques
+Compilation: Transformation du fichier rapport_stock.jrxml via JasperCompileManager.
 
-- Utilisation de JasperCompileManager, JasperFillManager et JasperExportManager
-- Connexion gérée via DatabaseManager
+Data Filling: Injection des données SQL en temps réel avec JasperFillManager.
+
+Export: Production du fichier final Etat_Stock.pdf.
+
+📂 Project Structure
+src/RapportStock.java : Coeur logique de l'application.
+
+src/rapport_stock.jrxml : Design du rapport (Layout & Queries).
+
+src/DatabaseManager.java : Configuration de la source de données.
+
+src/Etat_Stock.pdf : Résultat final généré.
+
+⚙️ Dependencies
+JasperReports 7.0.2 : Moteur de génération.
+
+MySQL Connector-J 9.2.0 : Pont de communication entre Java et MySQL.
+
+💡 Why this matters for Data Analysis?
+Ce projet démontre ma capacité à :
+
+Concevoir et interroger des bases de données relationnelles.
+
+Maîtriser le cycle ETL (Extract, Transform, Load) simplifié.
+
+Fournir des outils de visualisation automatisés pour les décideurs métiers.
 
